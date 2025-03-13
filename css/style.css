@@ -1391,3 +1391,55 @@ xpush
   font-weight: 600;
   font-size: 0.9rem;
 }
+
+/* ========== Fancy Buttons for Intro Section ========== */
+.social-buttons {
+  display: flex;
+  gap: 1rem; /* space between buttons */
+  margin-top: 2rem; /* add spacing from text */
+}
+
+.fancy-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* space between icon and text */
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  background: #333; /* base background color */
+  border-radius: 4px;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+/* Icon sizes */
+.fancy-btn i {
+  font-size: 1.2rem;
+}
+
+/* The diagonal color sweep */
+.fancy-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 0;
+  height: 100%;
+  background: #3498db; /* highlight color (blue) */
+  transform: skewX(-15deg);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.fancy-btn:hover {
+  color: #fff; /* keep text white on hover */
+}
+
+.fancy-btn:hover::before {
+  width: 200%;
+  left: 0;
+}
+

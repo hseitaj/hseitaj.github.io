@@ -86,22 +86,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		});
 	});
 
-	// const navLinks = document.querySelectorAll('.nav-link.js-scroll-trigger');
-    // navLinks.forEach(link => {
-    //     link.addEventListener('click', () => {
-    //         const width = window.innerWidth;
-    //         if (width < 992) {
-    //             wrapper.classList.add('collapsed');
-    //             sidebarToggle.classList.remove('is-active');
-    //             sideNav.classList.add('collapsed');
-    //             mainContent.style.transform = 'none';
-    //             mainContent.style.paddingLeft = '1rem';  // Adjust padding to ensure content doesn't shift to the left
-    //         }
-    //     });
-    // });
-
 });
 
+document.querySelectorAll('.fancy-btn').forEach((btn) => {
+	btn.addEventListener('mousemove', (e) => {
+	  const rect = btn.getBoundingClientRect();
+	  const x = e.clientX - rect.left - rect.width / 2;
+	  const y = e.clientY - rect.top - rect.height / 2;
+	  btn.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+	});
+	btn.addEventListener('mouseleave', () => {
+	  btn.style.transform = 'translate(0, 0)';
+	});
+  });
+  
 
 window.addEventListener('DOMContentLoaded', event => {
 
