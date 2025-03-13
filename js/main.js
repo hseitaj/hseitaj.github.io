@@ -326,3 +326,56 @@ jQuery(document).ready(function($){
 		$newWord.removeClass('is-hidden').addClass('is-visible');
 	}
 });
+
+.social-buttons {
+	display: flex;
+	gap: 1rem; /* space between the buttons */
+	margin-top: 2rem;
+  }
+  
+  /* The fancy button base */
+  .fancy-btn {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px; /* space between icon and text */
+	padding: 0.75rem 1.25rem;
+	font-size: 1rem;
+	font-weight: 600;
+	text-decoration: none;
+	color: #fff;
+	background: #333; /* base background color */
+	border-radius: 4px;
+	overflow: hidden;
+	transition: color 0.3s ease;
+  }
+  
+  /* Icon sizing inside the button */
+  .fancy-btn i {
+	font-size: 1.2rem;
+  }
+  
+  /* Diagonal color sweep effect */
+  .fancy-btn::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -50%;
+	width: 0;
+	height: 100%;
+	background: #3498db; /* highlight color (blue) */
+	transform: skewX(-15deg);
+	transition: all 0.5s ease;
+	z-index: -1; /* behind the text */
+  }
+  
+  /* Hover styles */
+  .fancy-btn:hover {
+	color: #fff; /* keep text white */
+  }
+  
+  .fancy-btn:hover::before {
+	width: 200%;
+	left: 0;
+  }
+  
