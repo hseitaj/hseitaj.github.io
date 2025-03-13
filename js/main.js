@@ -3,34 +3,6 @@
 * Copyright 2013-2023 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
 */
-//
-// Scripts
-// 
-
-// document.getElementById('status').innerHTML = "Sending...";
-// formData = {
-//   'name': $('input[name=name]').val(),
-//   'email': $('input[name=email]').val(),
-//   'subject': $('input[name=subject]').val(),
-//   'message': $('textarea[name=message]').val()
-// };
-
-
-// $.ajax({
-//   url: "mail.php",
-//   type: "POST",
-//   data: formData,
-//   success: function (data, textStatus, jqXHR) {
-
-//     $('#status').text(data.message);
-//     if (data.code) //If mail was sent successfully, reset the form.
-//       $('#contact-form').closest('form').find("input[type=text], textarea").val("");
-//   },
-//   error: function (jqXHR, textStatus, errorThrown) {
-//     $('#status').text(jqXHR);
-//   }
-// });
-
 document.addEventListener("DOMContentLoaded", () => {
 	const sidebarToggle = document.getElementById("sidebarToggle");
 	const wrapper = document.getElementById("wrapper");
