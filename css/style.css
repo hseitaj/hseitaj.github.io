@@ -1949,7 +1949,7 @@ xpush
 /* Main Title Styling */
 /* Parent section: no background or minimal style to avoid clashing with hamburger */
 .about-section {
-  padding: 60px 20px;
+  padding: 95px 20px;
   background: none; /* Or use 'background: transparent;' */
 }
 
