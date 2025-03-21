@@ -2262,3 +2262,99 @@ xpush
   background-color: #1c5980;
   transform: translateY(-2px);
 }
+
+/* Projects Grid: 4 columns on wide screens */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Project Card Base */
+.project-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Header with Flex for proper alignment */
+.card-header {
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+/* Project Icon: using flex for perfect centering */
+.project-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  color: #fff;
+}
+
+/* Project Title */
+.project-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333;
+}
+.project-title a {
+  text-decoration: none;
+  color: inherit;
+}
+.project-title a:hover {
+  text-decoration: underline;
+}
+
+/* Card Body */
+.card-body {
+  padding: 1rem 1.5rem 1.5rem;
+}
+.project-description {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+/* Project Skills */
+.project-skills {
+  margin-top: 0.75rem;
+}
+.project-skills .skill {
+  display: inline-block;
+  background: #eee;
+  color: #333;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Subproject List */
+.subproject-list {
+  list-style-type: disc;
+  margin: 0.5rem 0 0 1.25rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+.subproject-list li {
+  margin-bottom: 0.25rem;
+}
+
+/* (Optional) You can add additional responsive adjustments as needed */
