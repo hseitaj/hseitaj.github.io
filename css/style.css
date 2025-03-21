@@ -2122,7 +2122,7 @@ xpush
   margin: 0;
 }
 
-/* Certification Card */
+/* Certification Card Styles */
 .cert-card {
   background: #f9f9f9;
   border: 1px solid #e0e0e0;
@@ -2137,14 +2137,12 @@ xpush
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Certification Icon */
 .cert-icon {
   font-size: 2rem;
   color: #3498db;
   margin-bottom: 10px;
 }
 
-/* Certification Title */
 .cert-title {
   font-size: 1.2rem;
   font-weight: 600;
@@ -2152,12 +2150,18 @@ xpush
   margin-bottom: 10px;
 }
 
-/* Certification Details */
 .cert-details {
   font-size: 1rem;
   color: #555;
   line-height: 1.5;
   margin: 0;
+}
+
+/* Responsive Grid for Certifications */
+.certs-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 /* Link styling for any inline links */
