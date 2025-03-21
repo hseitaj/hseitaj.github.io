@@ -17,6 +17,8 @@ body {
   z-index: 1050;
 }
 
+/* Side Nav Bar */
+
 #sideNav {
   transition: transform 0.3s;
   position: fixed;
@@ -91,6 +93,7 @@ body {
   }
 }
 
+/* Caruousel */
 .carousel-item:hover .carousel-caption {
   opacity: 1;
 }
@@ -121,20 +124,6 @@ body {
 .carousel-control-next-icon:after {
   background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><path d="M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z" fill="%23000"/></svg>');
 }
-
-/* #sidebar {
-  min-width: 250px;
-  max-width: 250px;
-  background: #7386d5;
-  color: #fff;
-  transition: all 0.6s cubic-bezier(0.945, 0.02, 0.27, 0.665);
-  transform-origin: center left;
-}
-
-#sidebar.active {
-  margin-left: -250px;
-  transform: rotateY(100deg);
-} */
 
 .cd-words-wrapper {
   display: inline-block;
@@ -2356,5 +2345,3 @@ xpush
 .subproject-list li {
   margin-bottom: 0.25rem;
 }
-
-/* (Optional) You can add additional responsive adjustments as needed */
