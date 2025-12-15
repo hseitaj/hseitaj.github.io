@@ -58,6 +58,26 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  // Ensure Bootstrap 5 tabs and carousels initialize after removing BS4 scripts
+  document.querySelectorAll('[data-bs-toggle="tab"]').forEach((tabEl) => {
+    const tabInstance = bootstrap.Tab.getOrCreateInstance(tabEl);
+    tabEl.addEventListener("click", (event) => {
+      event.preventDefault();
+      tabInstance.show();
+    });
+  });
+
+  document.querySelectorAll(".carousel").forEach((carouselEl) => {
+    const rideValue = carouselEl.getAttribute("data-bs-ride") || false;
+    const intervalAttr = carouselEl.getAttribute("data-bs-interval");
+    bootstrap.Carousel.getOrCreateInstance(carouselEl, {
+      ride: rideValue === "carousel" ? "carousel" : false,
+      interval: intervalAttr ? Number(intervalAttr) : 5000,
+    });
+  });
+});
+
 document.querySelectorAll(".fancy-btn").forEach((btn) => {
   btn.addEventListener("mousemove", (e) => {
     const rect = btn.getBoundingClientRect();
