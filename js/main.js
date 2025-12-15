@@ -25,11 +25,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.querySelectorAll(".carousel-item").forEach((item) => {
   item.addEventListener("mouseover", function () {
-    const projectId = this.dataset.projectId;
-    const projectTitle = document.querySelector(
-      `#${projectId} strong`
-    ).textContent;
-    this.querySelector(".carousel-caption h5").textContent = projectTitle;
+    const captionTitle = this.querySelector(".carousel-caption h5");
+    const projectTitleElement =
+      this.querySelector(".carousel-caption h5 a") || captionTitle;
+
+    if (!captionTitle || !projectTitleElement) return;
+
+    const projectTitle = projectTitleElement.textContent.trim();
+    captionTitle.textContent = projectTitle;
   });
 });
 
