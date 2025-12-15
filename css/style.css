@@ -10,6 +10,28 @@ body {
   overflow-x: hidden; /* Hides any horizontal overflow */
 }
 
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #6610f2);
+  z-index: 1000;
+  transition: width 0.1s ease;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
 #sidebarToggle {
   position: fixed;
   top: 0;
@@ -1502,6 +1524,11 @@ xpush
   color: #3498db;
 }
 
+/* Animation delays for education cards */
+.education-grid .education-card:nth-child(1) { --animation-delay: 0.2s; }
+.education-grid .education-card:nth-child(2) { --animation-delay: 0.4s; }
+.education-grid .education-card:nth-child(3) { --animation-delay: 0.6s; }
+
 /* Fade In Up Animation */
 @keyframes fadeInUp {
   to {
@@ -1609,12 +1636,117 @@ xpush
   color: #e67e22;
 }
 
+/* Animation delays for experience cards */
+.experience-grid .experience-card:nth-child(1) { --animation-delay: 0.1s; }
+.experience-grid .experience-card:nth-child(2) { --animation-delay: 0.2s; }
+.experience-grid .experience-card:nth-child(3) { --animation-delay: 0.3s; }
+.experience-grid .experience-card:nth-child(4) { --animation-delay: 0.4s; }
+.experience-grid .experience-card:nth-child(5) { --animation-delay: 0.5s; }
+.experience-grid .experience-card:nth-child(6) { --animation-delay: 0.6s; }
+.experience-grid .experience-card:nth-child(7) { --animation-delay: 0.7s; }
+.experience-grid .experience-card:nth-child(8) { --animation-delay: 0.8s; }
+
 /* Fade In Up Animation */
 @keyframes fadeInUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Volunteering Section Base */
+.volunteering-section {
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+.volunteering-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Volunteering Grid Layout */
+.volunteering-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Volunteering Card Styles */
+.volunteering-card {
+  background: #fefefe;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid transparent;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: var(--animation-delay);
+}
+
+/* Hover effect */
+.volunteering-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Gradient accent border via pseudo-element */
+.volunteering-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, #27ae60, #2ecc71);
+}
+
+/* Card Content */
+.volunteering-card .card-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.volunteering-card .card-content .subheading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.volunteering-card .card-content ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #444;
+}
+
+.volunteering-card .card-content ul li {
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.volunteering-card .card-content p {
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Date Styling */
+.volunteering-card .card-date {
+  margin-top: 15px;
+  text-align: right;
+}
+
+.volunteering-card .card-date span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #27ae60;
 }
 
 /* Publications Section Base */
@@ -1786,6 +1918,28 @@ xpush
   margin: 0;
   color: #333;
 }
+
+/* Animation delays for skill cards */
+.skills-grid .skill-card:nth-child(1) { --animation-delay: 0.1s; }
+.skills-grid .skill-card:nth-child(2) { --animation-delay: 0.15s; }
+.skills-grid .skill-card:nth-child(3) { --animation-delay: 0.2s; }
+.skills-grid .skill-card:nth-child(4) { --animation-delay: 0.25s; }
+.skills-grid .skill-card:nth-child(5) { --animation-delay: 0.3s; }
+.skills-grid .skill-card:nth-child(6) { --animation-delay: 0.35s; }
+.skills-grid .skill-card:nth-child(7) { --animation-delay: 0.4s; }
+.skills-grid .skill-card:nth-child(8) { --animation-delay: 0.45s; }
+.skills-grid .skill-card:nth-child(9) { --animation-delay: 0.5s; }
+.skills-grid .skill-card:nth-child(10) { --animation-delay: 0.55s; }
+.skills-grid .skill-card:nth-child(11) { --animation-delay: 0.6s; }
+.skills-grid .skill-card:nth-child(12) { --animation-delay: 0.65s; }
+.skills-grid .skill-card:nth-child(13) { --animation-delay: 0.7s; }
+.skills-grid .skill-card:nth-child(14) { --animation-delay: 0.75s; }
+.skills-grid .skill-card:nth-child(15) { --animation-delay: 0.8s; }
+.skills-grid .skill-card:nth-child(16) { --animation-delay: 0.85s; }
+.skills-grid .skill-card:nth-child(17) { --animation-delay: 0.9s; }
+.skills-grid .skill-card:nth-child(18) { --animation-delay: 0.95s; }
+.skills-grid .skill-card:nth-child(19) { --animation-delay: 1s; }
+.skills-grid .skill-card:nth-child(20) { --animation-delay: 1.05s; }
 
 /* Fade In Up Animation */
 @keyframes fadeInUp {
@@ -2297,6 +2451,38 @@ xpush
   border-radius: 50%;
   color: #fff;
 }
+
+/* Project colors */
+.project-color-1 .project-card { border-top-color: #f39c12; }
+.project-color-1 .project-icon { background-color: #f39c12; }
+.project-color-2 .project-card { border-top-color: #27ae60; }
+.project-color-2 .project-icon { background-color: #27ae60; }
+.project-color-3 .project-card { border-top-color: #2980b9; }
+.project-color-3 .project-icon { background-color: #2980b9; }
+.project-color-4 .project-card { border-top-color: #9b59b6; }
+.project-color-4 .project-icon { background-color: #9b59b6; }
+.project-color-5 .project-card { border-top-color: #e74c3c; }
+.project-color-5 .project-icon { background-color: #e74c3c; }
+.project-color-6 .project-card { border-top-color: #8e44ad; }
+.project-color-6 .project-icon { background-color: #8e44ad; }
+.project-color-7 .project-card { border-top-color: #16a085; }
+.project-color-7 .project-icon { background-color: #16a085; }
+.project-color-8 .project-card { border-top-color: #d35400; }
+.project-color-8 .project-icon { background-color: #d35400; }
+.project-color-9 .project-card { border-top-color: #34495e; }
+.project-color-9 .project-icon { background-color: #34495e; }
+.project-color-10 .project-card { border-top-color: #2c3e50; }
+.project-color-10 .project-icon { background-color: #2c3e50; }
+.project-color-11 .project-card { border-top-color: #e67e22; }
+.project-color-11 .project-icon { background-color: #e67e22; }
+.project-color-12 .project-card { border-top-color: #8e44ad; }
+.project-color-12 .project-icon { background-color: #8e44ad; }
+.project-color-13 .project-card { border-top-color: #16a085; }
+.project-color-13 .project-icon { background-color: #16a085; }
+.project-color-14 .project-card { border-top-color: #2980b9; }
+.project-color-14 .project-icon { background-color: #2980b9; }
+.project-color-15 .project-card { border-top-color: #e74c3c; }
+.project-color-15 .project-icon { background-color: #e74c3c; }
 
 /* Project Title */
 .project-title {

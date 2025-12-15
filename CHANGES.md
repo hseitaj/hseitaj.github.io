@@ -7,6 +7,11 @@ This document lists all changes made to the personal website project, with dates
 - **Added hamburger classes to mobile navbar-toggler**: Restored hamburger animation classes to the mobile toggle button to enable proper toggle functionality.
 - **Added mobile hamburger toggle JS**: Implemented JavaScript event listener for mobile hamburger animation to handle toggle state.
 - **Added carousel controls hide code**: Added logic to hide carousel navigation controls when only one item is present in the carousel.
+- **Removed Resume2025.pdf**: Deleted the resume PDF file from assets since the download link is commented out and the site uses Netlify.
+- **Added video publication**: Included a new publication entry for the YouTube video presentation of the research paper.
+- **Added Volunteering section**: Created a new section with two volunteering experiences: ESL teaching at Community College of Philadelphia and External Board Member at Penn State Abington.
+- **Reordered sections**: Moved Volunteering and Publications sections to appear after Projects in both navigation and content.
+- **Updated volunteering description**: Changed the first volunteering entry from bullet points to a single paragraph description.
 
 ## Earlier Changes (Approximate Timeline)
 - **Added new experience entry**: Included Python Software Engineer role at The Allére Group to update professional experience section.

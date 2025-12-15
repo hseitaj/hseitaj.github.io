@@ -84,8 +84,8 @@
     </script>
   </head>
   <body id="page-top">
-    <div id="scroll-progress" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(90deg, #007bff, #6610f2); z-index: 1000; transition: width 0.1s ease;"></div>
-    <a href="#experience" class="skip-link" style="position: absolute; top: -40px; left: 6px; background: #000; color: #fff; padding: 8px; text-decoration: none; z-index: 100;">Skip to main content</a>
+    <div id="scroll-progress"></div>
+    <a href="#experience" class="skip-link">Skip to main content</a>
     <div id="wrapper">
       <!-- Sidebar Toggle Button -->
       <button
@@ -139,16 +139,21 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#publications"
-                >Publications</a
-              >
-            </li>
-            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#projects"
                 >Projects</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#volunteering"
+                >Volunteering</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#publications"
+                >Publications</a
               >
             </li>
             <li class="nav-item">
@@ -255,7 +260,7 @@
           <h2 class="section-title">Software Engineer Experience</h2>
           <div class="experience-grid">
             <!-- Experience Card 1 -->
-            <div class="experience-card" style="--animation-delay: 0.1s">
+            <div class="experience-card">
               <div class="card-content">
                 <h3>Python Software Engineer (Contractor to BlackRock)</h3>
                 <p class="subheading">The Allére Group · Full-time</p>
@@ -284,7 +289,7 @@
               </div>
             </div>
             <!-- Experience Card 2 -->
-            <div class="experience-card" style="--animation-delay: 0.2s">
+            <div class="experience-card">
               <div class="card-content">
                 <h3>Junior Software Engineer</h3>
                 <p class="subheading">Avo Photonics · Full-time</p>
@@ -326,7 +331,7 @@
               </div>
             </div>
             <!-- Experience Card 3 -->
-            <div class="experience-card" style="--animation-delay: 0.3s">
+            <div class="experience-card">
               <div class="card-content">
                 <h3>AI Software Engineer (Project)</h3>
                 <p class="subheading">Penn State Abington · Full-time</p>
@@ -370,7 +375,7 @@
               </div>
             </div>
             <!-- Experience Card 4 -->
-            <div class="experience-card" style="--animation-delay: 0.4s">
+            <div class="experience-card">
               <div class="card-content">
                 <h3>Peer Advisor</h3>
                 <p class="subheading">Penn State Abington · Part-time</p>
@@ -399,7 +404,7 @@
               </div>
             </div>
             <!-- Experience Card 5 -->
-            <div class="experience-card" style="--animation-delay: 0.5s">
+            <div class="experience-card">
               <div class="card-content">
                 <h3>Teaching Assistant STEM</h3>
                 <p class="subheading">Penn State Abington · Part-time</p>
@@ -425,7 +430,7 @@
               </div>
             </div>
             <!-- Experience Card 6 -->
-            <div class="experience-card" style="--animation-delay: 0.6s">
+            <div class="experience-card">
               <div class="card-content">
                 <h3>Undergraduate Researcher</h3>
                 <p class="subheading">Penn State Abington · Full-time</p>
@@ -472,7 +477,7 @@
               </div>
             </div>
             <!-- Experience Card 7 -->
-            <div class="experience-card" style="--animation-delay: 0.7s">
+            <div class="experience-card">
               <div class="card-content">
                 <h3>Full Stack Developer (Project)</h3>
                 <p class="subheading">Penn State Abington</p>
@@ -509,7 +514,7 @@
               </div>
             </div>
             <!-- Experience Card 8 -->
-            <div class="experience-card" style="--animation-delay: 0.8s">
+            <div class="experience-card">
               <div class="card-content">
                 <h3>Software Engineer (Project)</h3>
                 <p class="subheading">
@@ -547,7 +552,7 @@
           <h2 class="section-title">Education</h2>
           <div class="education-grid">
             <!-- Education Card 1 -->
-            <div class="education-card" style="--animation-delay: 0.2s">
+            <div class="education-card">
               <div class="card-content">
                 <h3>The Pennsylvania State University, Abington, PA</h3>
                 <p class="degree">Bachelor of Science, Computer Science</p>
@@ -559,7 +564,7 @@
             </div>
 
             <!-- Education Card 2 -->
-            <div class="education-card" style="--animation-delay: 0.4s">
+            <div class="education-card">
               <div class="card-content">
                 <h3>Rowan College at Burlington County, Mount Laurel, NJ</h3>
                 <p class="degree">A.S. in Computer Science</p>
@@ -571,7 +576,7 @@
             </div>
 
             <!-- Education Card 3 -->
-            <div class="education-card" style="--animation-delay: 0.6s">
+            <div class="education-card">
               <div class="card-content">
                 <h3>Community College of Philadelphia, Philadelphia, PA</h3>
                 <p class="degree">Completed 18 credits in Computer Science</p>
@@ -580,54 +585,6 @@
               <div class="card-date">
                 <span>May 2019</span>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <hr class="m-0" />
-      <!-- Publications Section -->
-      <section id="publications" class="publications-section">
-        <div class="container">
-          <h2 class="section-title">Publications</h2>
-          <div class="publication-card" style="--animation-delay: 0.2s">
-            <div class="card-content">
-              <h3>
-                Information Extraction from Product Labels: A Machine Vision
-                Approach
-              </h3>
-              <p class="subheading">
-                The International Journal of Artificial Intelligence &amp;
-                Applications (IJAIA)
-              </p>
-              <p class="pub-description">
-                My first research paper, "Information Extraction from Product
-                Labels: A Machine Vision Approach," co-authored with Vinayak
-                Elangovan at Pennsylvania State University. Our study presents a
-                unique approach to enhancing text recognition by combining
-                Convolutional Neural Networks (CNNs) and Recurrent Neural
-                Networks (RNNs) into a Convolutional Recurrent Neural Network
-                (CRNN) and integrating it with Tesseract OCR.
-              </p>
-              <p class="pub-description">
-                This research aims to improve accessibility for the visually
-                impaired by automating the extraction and recognition of
-                information from product labels. We demonstrate the potential of
-                machine learning and optical character recognition (OCR)
-                technologies in streamlining the extraction of vital information
-                from product packaging. This publication is a significant
-                milestone in my career, showcasing the intersection of advanced
-                machine vision techniques and practical applications.
-              </p>
-              <a
-                href="https://aircconline.com/abstract/ijaia/v15n2/15224ijaia04.html"
-                class="btn btn-publication"
-                target="_blank"
-              >
-                Show Publication
-              </a>
-            </div>
-            <div class="card-date">
-              <span>Mar 29, 2024</span>
             </div>
           </div>
         </div>
@@ -643,7 +600,7 @@
               <h3>Programming Languages &amp; Tools</h3>
               <div class="skills-grid">
                 <!-- Go -->
-                <div class="skill-card" style="--animation-delay: 0.1s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg"
                     alt="Go"
@@ -651,7 +608,7 @@
                   <p>Go</p>
                 </div>
                 <!-- HTML5 -->
-                <div class="skill-card" style="--animation-delay: 0.15s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
                     alt="HTML5"
@@ -659,7 +616,7 @@
                   <p>HTML5</p>
                 </div>
                 <!-- CSS3 -->
-                <div class="skill-card" style="--animation-delay: 0.2s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
                     alt="CSS3"
@@ -667,7 +624,7 @@
                   <p>CSS3</p>
                 </div>
                 <!-- JavaScript -->
-                <div class="skill-card" style="--animation-delay: 0.25s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
                     alt="JavaScript"
@@ -675,7 +632,7 @@
                   <p>JavaScript</p>
                 </div>
                 <!-- PHP -->
-                <div class="skill-card" style="--animation-delay: 0.3s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
                     alt="PHP"
@@ -683,7 +640,7 @@
                   <p>PHP</p>
                 </div>
                 <!-- Python -->
-                <div class="skill-card" style="--animation-delay: 0.35s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
                     alt="Python"
@@ -691,7 +648,7 @@
                   <p>Python</p>
                 </div>
                 <!-- C -->
-                <div class="skill-card" style="--animation-delay: 0.4s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg"
                     alt="C"
@@ -699,7 +656,7 @@
                   <p>C</p>
                 </div>
                 <!-- C++ -->
-                <div class="skill-card" style="--animation-delay: 0.45s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg"
                     alt="C++"
@@ -707,7 +664,7 @@
                   <p>C++</p>
                 </div>
                 <!-- Java -->
-                <div class="skill-card" style="--animation-delay: 0.5s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
                     alt="Java"
@@ -715,7 +672,7 @@
                   <p>Java</p>
                 </div>
                 <!-- Node.js -->
-                <div class="skill-card" style="--animation-delay: 0.55s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
                     alt="Node.js"
@@ -723,7 +680,7 @@
                   <p>Node.js</p>
                 </div>
                 <!-- .NET -->
-                <div class="skill-card" style="--animation-delay: 0.6s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg"
                     alt=".NET"
@@ -731,7 +688,7 @@
                   <p>.NET</p>
                 </div>
                 <!-- C# -->
-                <div class="skill-card" style="--animation-delay: 0.65s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg"
                     alt="C#"
@@ -739,7 +696,7 @@
                   <p>C#</p>
                 </div>
                 <!-- Docker -->
-                <div class="skill-card" style="--animation-delay: 0.7s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg"
                     alt="Docker"
@@ -747,7 +704,7 @@
                   <p>Docker</p>
                 </div>
                 <!-- Git -->
-                <div class="skill-card" style="--animation-delay: 0.75s">
+                <div class="skill-card">
                   <img
                     src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
                     alt="Git"
@@ -755,7 +712,7 @@
                   <p>Git</p>
                 </div>
                 <!-- VS Code -->
-                <div class="skill-card" style="--animation-delay: 0.8s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg"
                     alt="VS Code"
@@ -763,7 +720,7 @@
                   <p>VS Code</p>
                 </div>
                 <!-- Visual Studio -->
-                <div class="skill-card" style="--animation-delay: 0.85s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/visualstudio/visualstudio-plain.svg"
                     alt="Visual Studio"
@@ -771,7 +728,7 @@
                   <p>Visual Studio</p>
                 </div>
                 <!-- MongoDB -->
-                <div class="skill-card" style="--animation-delay: 0.9s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
                     alt="MongoDB"
@@ -779,7 +736,7 @@
                   <p>MongoDB</p>
                 </div>
                 <!-- MySQL -->
-                <div class="skill-card" style="--animation-delay: 0.95s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
                     alt="MySQL"
@@ -787,7 +744,7 @@
                   <p>MySQL</p>
                 </div>
                 <!-- MS SQL Server -->
-                <div class="skill-card" style="--animation-delay: 1s">
+                <div class="skill-card">
                   <img
                     src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg"
                     alt="MS SQL"
@@ -795,7 +752,7 @@
                   <p>MS SQL</p>
                 </div>
                 <!-- Bash -->
-                <div class="skill-card" style="--animation-delay: 1.05s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bash/bash-original.svg"
                     alt="Bash"
@@ -810,7 +767,7 @@
               <h3>Frameworks &amp; Libraries</h3>
               <div class="skills-grid">
                 <!-- Express.js -->
-                <div class="skill-card" style="--animation-delay: 0.1s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg"
                     alt="Express.js"
@@ -818,7 +775,7 @@
                   <p>Express.js</p>
                 </div>
                 <!-- Bootstrap -->
-                <div class="skill-card" style="--animation-delay: 0.15s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
                     alt="Bootstrap"
@@ -826,7 +783,7 @@
                   <p>Bootstrap</p>
                 </div>
                 <!-- jQuery -->
-                <div class="skill-card" style="--animation-delay: 0.2s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jquery/jquery-plain-wordmark.svg"
                     alt="jQuery"
@@ -834,7 +791,7 @@
                   <p>jQuery</p>
                 </div>
                 <!-- Laravel -->
-                <div class="skill-card" style="--animation-delay: 0.25s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg"
                     alt="Laravel"
@@ -842,7 +799,7 @@
                   <p>Laravel</p>
                 </div>
                 <!-- Flask -->
-                <div class="skill-card" style="--animation-delay: 0.3s">
+                <div class="skill-card">
                   <img
                     src="https://cdn.worldvectorlogo.com/logos/flask.svg"
                     alt="Flask"
@@ -850,7 +807,7 @@
                   <p>Flask</p>
                 </div>
                 <!-- PyQt5 -->
-                <div class="skill-card" style="--animation-delay: 0.35s">
+                <div class="skill-card">
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/6/65/PyQt_logo.svg"
                     alt="PyQt5"
@@ -858,7 +815,7 @@
                   <p>PyQt5</p>
                 </div>
                 <!-- Next.js -->
-                <div class="skill-card" style="--animation-delay: 0.4s">
+                <div class="skill-card">
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg"
                     alt="Next.js"
@@ -866,7 +823,7 @@
                   <p>Next.js</p>
                 </div>
                 <!-- React -->
-                <div class="skill-card" style="--animation-delay: 0.45s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
                     alt="React"
@@ -874,7 +831,7 @@
                   <p>React</p>
                 </div>
                 <!-- Postman -->
-                <div class="skill-card" style="--animation-delay: 0.5s">
+                <div class="skill-card">
                   <img
                     src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
                     alt="Postman"
@@ -889,7 +846,7 @@
               <h3>DevOps, Testing &amp; Collaboration Tools</h3>
               <div class="skills-grid">
                 <!-- GitHub -->
-                <div class="skill-card" style="--animation-delay: 0.1s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
                     alt="GitHub"
@@ -897,7 +854,7 @@
                   <p>GitHub</p>
                 </div>
                 <!-- GitLab -->
-                <div class="skill-card" style="--animation-delay: 0.15s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/gitlab/gitlab-original.svg"
                     alt="GitLab"
@@ -912,7 +869,7 @@
               <h3>AI, ML &amp; Data</h3>
               <div class="skills-grid">
                 <!-- TensorFlow -->
-                <div class="skill-card" style="--animation-delay: 0.1s">
+                <div class="skill-card">
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg"
                     alt="TensorFlow"
@@ -920,7 +877,7 @@
                   <p>TensorFlow</p>
                 </div>
                 <!-- Tesseract OCR -->
-                <div class="skill-card" style="--animation-delay: 0.15s">
+                <div class="skill-card">
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Tesseract-OCR_Icon.png"
                     alt="Tesseract OCR"
@@ -928,7 +885,7 @@
                   <p>Tesseract OCR</p>
                 </div>
                 <!-- Pandas -->
-                <div class="skill-card" style="--animation-delay: 0.2s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg"
                     alt="Pandas"
@@ -943,7 +900,7 @@
               <h3>Operating Systems</h3>
               <div class="skills-grid">
                 <!-- Linux -->
-                <div class="skill-card" style="--animation-delay: 0.1s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
                     alt="Linux"
@@ -951,7 +908,7 @@
                   <p>Linux</p>
                 </div>
                 <!-- Windows -->
-                <div class="skill-card" style="--animation-delay: 0.15s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/windows8/windows8-original.svg"
                     alt="Windows"
@@ -959,7 +916,7 @@
                   <p>Windows</p>
                 </div>
                 <!-- macOS -->
-                <div class="skill-card" style="--animation-delay: 0.2s">
+                <div class="skill-card">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/apple/apple-original.svg"
                     alt="macOS"
@@ -974,7 +931,7 @@
               <h3>Professional Tools &amp; Practices</h3>
               <div class="skills-grid">
                 <!-- JMeter -->
-                <div class="skill-card" style="--animation-delay: 0.1s">
+                <div class="skill-card">
                   <img
                     src="https://jmeter.apache.org/images/jmeter_square.svg"
                     alt="JMeter"
@@ -982,7 +939,7 @@
                   <p>JMeter</p>
                 </div>
                 <!-- XAMPP -->
-                <div class="skill-card" style="--animation-delay: 0.15s">
+                <div class="skill-card">
                   <img
                     src="https://www.apachefriends.org/images/xampp-logo.svg"
                     alt="XAMPP"
@@ -990,7 +947,7 @@
                   <p>XAMPP</p>
                 </div>
                 <!-- MAMP -->
-                <div class="skill-card" style="--animation-delay: 0.2s">
+                <div class="skill-card">
                   <img
                     src="https://www.mamp.info/images/icons-mamp-pro-mamp.svg"
                     alt="MAMP"
@@ -998,7 +955,7 @@
                   <p>MAMP</p>
                 </div>
                 <!-- Code Review -->
-                <div class="skill-card" style="--animation-delay: 0.25s">
+                <div class="skill-card">
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/4807/4807659.png"
                     alt="Code Review"
@@ -1006,7 +963,7 @@
                   <p>Code Review</p>
                 </div>
                 <!-- Agile Methodologies -->
-                <div class="skill-card" style="--animation-delay: 0.3s">
+                <div class="skill-card">
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/2658/2658323.png"
                     alt="Agile Methodologies"
@@ -1014,7 +971,7 @@
                   <p>Agile Methodologies</p>
                 </div>
                 <!-- SDLC -->
-                <div class="skill-card" style="--animation-delay: 0.35s">
+                <div class="skill-card">
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/1017/1017469.png"
                     alt="SDLC"
@@ -1022,7 +979,7 @@
                   <p>SDLC</p>
                 </div>
                 <!-- API Development -->
-                <div class="skill-card" style="--animation-delay: 0.4s">
+                <div class="skill-card">
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/1183/1183799.png"
                     alt="API Development"
@@ -1030,7 +987,7 @@
                   <p>API Development</p>
                 </div>
                 <!-- CI/CD -->
-                <div class="skill-card" style="--animation-delay: 0.45s">
+                <div class="skill-card">
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/6504/6504608.png"
                     alt="CI/CD"
@@ -1038,7 +995,7 @@
                   <p>CI/CD</p>
                 </div>
                 <!-- OOP -->
-                <div class="skill-card" style="--animation-delay: 0.5s">
+                <div class="skill-card">
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/679/679867.png"
                     alt="OOP"
@@ -1046,7 +1003,7 @@
                   <p>OOP</p>
                 </div>
                 <!-- Version Control & Documentation -->
-                <div class="skill-card" style="--animation-delay: 0.55s">
+                <div class="skill-card">
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/4647/4647631.png"
                     alt="Version Control & Documentation"
@@ -1054,7 +1011,7 @@
                   <p>Version Control &amp; Docs</p>
                 </div>
                 <!-- Testing, Debugging & PM -->
-                <div class="skill-card" style="--animation-delay: 0.6s">
+                <div class="skill-card">
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/2329/2329067.png"
                     alt="Testing & Debugging"
@@ -1062,7 +1019,7 @@
                   <p>Testing &amp; Debugging</p>
                 </div>
                 <!-- Communication & Leadership -->
-                <div class="skill-card" style="--animation-delay: 0.65s">
+                <div class="skill-card">
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/912/912781.png"
                     alt="Communication & Leadership"
@@ -1660,6 +1617,108 @@
                   </a>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="m-0" />
+      <!-- Volunteering Section -->
+      <section id="volunteering" class="volunteering-section">
+        <div class="container">
+          <h2 class="section-title">Volunteering</h2>
+          <div class="volunteering-grid">
+            <!-- Volunteering Card 1 -->
+            <div class="volunteering-card">
+              <div class="card-content">
+                <h3>Volunteer</h3>
+                <p class="subheading">Community College of Philadelphia</p>
+                <p>Volunteer at the Community College of Philadelphia, contributing to a service learning partnership that empowered 21st-century ESL learners through collaboration with a Temple University program and international educators. Delivered instruction on transferable college and career skills, including professional communication, SMART goal setting, and public speaking, while working closely with volunteer teams and program leaders.</p>
+              </div>
+              <div class="card-date">
+                <span>Jan 2020 - May 2020</span>
+              </div>
+            </div>
+            <!-- Volunteering Card 2 -->
+            <div class="volunteering-card">
+              <div class="card-content">
+                <h3>External Board Member</h3>
+                <p class="subheading">Penn State Abington</p>
+                <p>External Board Member for the PSU Abington Computer Science program. Partner with faculty to align curriculum with industry needs.</p>
+              </div>
+              <div class="card-date">
+                <span>Aug 2025 - Present</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="m-0" />
+      <!-- Publications Section -->
+      <section id="publications" class="publications-section">
+        <div class="container">
+          <h2 class="section-title">Publications</h2>
+          <div class="publication-card">
+            <div class="card-content">
+              <h3>
+                Information Extraction from Product Labels: A Machine Vision
+                Approach
+              </h3>
+              <p class="subheading">
+                The International Journal of Artificial Intelligence &amp;
+                Applications (IJAIA)
+              </p>
+              <p class="pub-description">
+                My first research paper, "Information Extraction from Product
+                Labels: A Machine Vision Approach," co-authored with Vinayak
+                Elangovan at Pennsylvania State University. Our study presents a
+                unique approach to enhancing text recognition by combining
+                Convolutional Neural Networks (CNNs) and Recurrent Neural
+                Networks (RNNs) into a Convolutional Recurrent Neural Network
+                (CRNN) and integrating it with Tesseract OCR.
+              </p>
+              <p class="pub-description">
+                This research aims to improve accessibility for the visually
+                impaired by automating the extraction and recognition of
+                information from product labels. We demonstrate the potential of
+                machine learning and optical character recognition (OCR)
+                technologies in streamlining the extraction of vital information
+                from product packaging. This publication is a significant
+                milestone in my career, showcasing the intersection of advanced
+                machine vision techniques and practical applications.
+              </p>
+              <a
+                href="https://aircconline.com/abstract/ijaia/v15n2/15224ijaia04.html"
+                class="btn btn-publication"
+                target="_blank"
+              >
+                Show Publication
+              </a>
+            </div>
+            <div class="card-date">
+              <span>Mar 29, 2024</span>
+            </div>
+          </div>
+          <div class="publication-card">
+            <div class="card-content">
+              <h3>
+                Presentation: Information Extraction from Product Labels - Machine Vision Approach
+              </h3>
+              <p class="subheading">
+                YouTube Video Presentation
+              </p>
+              <p class="pub-description">
+                Video presentation of the research paper, showcasing the integration of CRNN with Tesseract OCR and demonstrating practical applications for accessibility.
+              </p>
+              <a
+                href="https://www.youtube.com/watch?v=E5srCRmDcHc"
+                class="btn btn-publication"
+                target="_blank"
+              >
+                Watch Video
+              </a>
+            </div>
+            <div class="card-date">
+              <span>Sep 2, 2024</span>
             </div>
           </div>
         </div>
