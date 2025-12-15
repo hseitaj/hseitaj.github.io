@@ -26,15 +26,19 @@ document.addEventListener("DOMContentLoaded", () => {
 document.querySelectorAll(".carousel-item").forEach((item) => {
   item.addEventListener("mouseover", function () {
     const projectId = this.dataset.projectId;
-    const projectTitle = document.querySelector(
-      `#${projectId} strong`
-    ).textContent;
-    this.querySelector(".carousel-caption h5").textContent = projectTitle;
+    const projectTitleElement = document.querySelector(`#${projectId} strong`);
+    const captionHeading = this.querySelector(".carousel-caption h5");
+
+    if (projectTitleElement && captionHeading) {
+      captionHeading.textContent = projectTitleElement.textContent;
+    }
   });
 });
 
 document.addEventListener("DOMContentLoaded", (event) => {
   const form = document.querySelector("#feedback-form");
+
+  if (!form) return;
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -60,6 +64,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   // Ensure Bootstrap 5 tabs and carousels initialize after removing BS4 scripts
+  if (typeof bootstrap === "undefined") return;
+
   document.querySelectorAll('[data-bs-toggle="tab"]').forEach((tabEl) => {
     const tabInstance = bootstrap.Tab.getOrCreateInstance(tabEl);
     tabEl.addEventListener("click", (event) => {
