@@ -33,6 +33,17 @@ document.querySelectorAll(".carousel-item").forEach((item) => {
   });
 });
 
+// Hide carousel controls if only one item
+document.querySelectorAll('.carousel').forEach(carousel => {
+  const items = carousel.querySelectorAll('.carousel-item');
+  if (items.length === 1) {
+    const prev = carousel.querySelector('.carousel-control-prev');
+    const next = carousel.querySelector('.carousel-control-next');
+    if (prev) prev.style.display = 'none';
+    if (next) next.style.display = 'none';
+  }
+});
+
 document.addEventListener("DOMContentLoaded", (event) => {
   const form = document.querySelector("#feedback-form");
 
@@ -76,22 +87,36 @@ window.addEventListener("DOMContentLoaded", (event) => {
   if (sideNav) {
     new bootstrap.ScrollSpy(document.body, {
       target: "#sideNav",
-      rootMargin: "0px 0px -40%",
+      offset: 100,
     });
   }
 
   // Toggle hamburger animation
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("is-active");
-  });
+  const hamburger = document.getElementById("sidebarToggle");
+  if (hamburger) {
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("is-active");
+    });
+  }
+
+  // Mobile hamburger toggle
+  const mobileHamburger = document.querySelector('.navbar-toggler');
+  if (mobileHamburger) {
+    mobileHamburger.addEventListener('click', () => {
+      mobileHamburger.classList.toggle('is-active');
+    });
+  }
+
+  // Handle initial layout based on window size
+  handleWindowResize();
 });
 
-// Listen for window resize events
-window.addEventListener("resize", function () {
+// Function to handle window resize and initial layout
+function handleWindowResize() {
   const sidebarToggle = document.getElementById("sidebarToggle");
   const wrapper = document.getElementById("wrapper");
   const sideNav = document.getElementById("sideNav");
-  const mainContent = document.getElementById("main-content"); // Ensure this id matches the id of your main content element
+  const mainContent = document.getElementById("main-content");
   const width = window.innerWidth;
 
   if (width >= 992) {
@@ -109,8 +134,15 @@ window.addEventListener("resize", function () {
     // Window width is less than 992px
     sidebarToggle.style.display = "none"; // Hide the custom sidebar toggle
     mainContent.style.paddingLeft = "0"; // Reset padding-left
+    // Ensure sidebar is collapsed on smaller screens
+    wrapper.classList.add("collapsed");
+    sideNav.classList.add("collapsed");
+    // mainContent.style.transform = "translateX(-8.5rem)";
   }
-});
+}
+
+// Listen for window resize events
+window.addEventListener("resize", handleWindowResize);
 
 jQuery(document).ready(function ($) {
   //set animation timing
@@ -305,5 +337,16 @@ jQuery(document).ready(function ($) {
   function switchWord($oldWord, $newWord) {
     $oldWord.removeClass("is-visible").addClass("is-hidden");
     $newWord.removeClass("is-hidden").addClass("is-visible");
+  }
+});
+
+// Scroll progress bar
+window.addEventListener('scroll', () => {
+  const scrollTop = window.pageYOffset;
+  const docHeight = document.body.offsetHeight - window.innerHeight;
+  const scrollPercent = (scrollTop / docHeight) * 100;
+  const progressBar = document.getElementById('scroll-progress');
+  if (progressBar) {
+    progressBar.style.width = scrollPercent + '%';
   }
 });

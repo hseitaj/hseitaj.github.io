@@ -6,8 +6,19 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="Hansi Seitaj Resume" />
-    <meta name="author" content="" />
+    <meta name="description" content="Portfolio of Hansi Seitaj: Software Engineer specializing in Python, AI, and web development." />
+    <meta name="author" content="Hansi Seitaj" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hansi Seitaj - Personal Website" />
+    <meta property="og:description" content="Portfolio of Hansi Seitaj: Software Engineer specializing in Python, AI, and web development." />
+    <meta property="og:image" content="https://hseitaj.github.io/assets/img/profile.png" />
+    <meta property="og:url" content="https://hseitaj.github.io" />
+    <meta property="og:type" content="website" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hansi Seitaj - Personal Website" />
+    <meta name="twitter:description" content="Portfolio of Hansi Seitaj: Software Engineer specializing in Python, AI, and web development." />
+    <meta name="twitter:image" content="https://hseitaj.github.io/assets/img/profile.png" />
     <title>Hansi Seitaj - Personal Website</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
@@ -16,6 +27,8 @@
       crossorigin="anonymous"
     ></script>
     <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
       rel="stylesheet"
@@ -37,20 +50,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css"
       rel="stylesheet"
     />
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <!-- Bootstrap JS and jQuery -->
     <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
     <!-- Notes:
@@ -60,8 +68,24 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css"
     />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Hansi Seitaj",
+      "jobTitle": "Software Engineer",
+      "url": "https://hseitaj.github.io",
+      "image": "https://hseitaj.github.io/assets/img/profile.png",
+      "sameAs": [
+        "https://github.com/hseitaj",
+        "https://www.linkedin.com/in/hansiseitaj/"
+      ]
+    }
+    </script>
   </head>
   <body id="page-top">
+    <div id="scroll-progress" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(90deg, #007bff, #6610f2); z-index: 1000; transition: width 0.1s ease;"></div>
+    <a href="#experience" class="skip-link" style="position: absolute; top: -40px; left: 6px; background: #000; color: #fff; padding: 8px; text-decoration: none; z-index: 100;">Skip to main content</a>
     <div id="wrapper">
       <!-- Sidebar Toggle Button -->
       <button
@@ -89,7 +113,7 @@
           /></span>
         </a>
         <button
-          class="navbar-toggler d-lg-none"
+          class="hamburger hamburger--squeeze navbar-toggler d-lg-none"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarResponsive"
@@ -211,7 +235,7 @@
               <i class="fab fa-github"></i>
               <span>GitHub</span>
             </a>
-            <a
+            <!-- <a
               href="assets/Resume2025.pdf"
               download
               class="fancy-btn"
@@ -219,7 +243,7 @@
             >
               <i class="fas fa-file-download"></i>
               <span>Download Resume</span>
-            </a>
+            </a> -->
           </div>
           <!-- End of Button Section -->
         </div>
@@ -231,6 +255,35 @@
           <h2 class="section-title">Software Engineer Experience</h2>
           <div class="experience-grid">
             <!-- Experience Card 1 -->
+            <div class="experience-card" style="--animation-delay: 0.1s">
+              <div class="card-content">
+                <h3>Python Software Engineer (Contractor to BlackRock)</h3>
+                <p class="subheading">The Allére Group · Full-time</p>
+                <ul>
+                  <li>
+                    Design and build high-performance Python connectors that
+                    ingest external threat-intelligence feeds
+                  </li>
+                  <li>
+                    Partner with BlackRock Infosec analysts to scope
+                    requirements and deliver secure integrations.
+                  </li>
+                  <li>
+                    Refactor and optimise existing connectors, adding automated
+                    tests and performance tuning.
+                  </li>
+                  <li>
+                    Track emerging integration techniques and prototype new
+                    data-ingestion approaches to keep the threat-intel pipeline
+                    aligned with the latest trends.
+                  </li>
+                </ul>
+              </div>
+              <div class="card-date">
+                <span>Jun 2025 - Present</span>
+              </div>
+            </div>
+            <!-- Experience Card 2 -->
             <div class="experience-card" style="--animation-delay: 0.2s">
               <div class="card-content">
                 <h3>Junior Software Engineer</h3>
@@ -238,189 +291,250 @@
                 <ul>
                   <li>
                     Proficient in the collection and interpretation of data
-                    essential for scalable manufacturing solutions.
+                    essential for the development of scalable manufacturing
+                    solutions.
                   </li>
                   <li>
-                    Designed, implemented, and maintained software solutions
-                    focused on manufacturing data traceability.
+                    Designing, implementing, and maintaining software solutions,
+                    particularly in manufacturing data traceability.
                   </li>
                   <li>
-                    Skilled in MongoDB, Python, HTML, JavaScript, CSS, and
+                    Proficient in MongoDB, Python, HTML, JavaScript, CSS, and
                     Docker.
                   </li>
-                  <li>Led CI/CD efforts for on-premises systems.</li>
                   <li>
-                    Gathered UI requirements and collaborated with operations
-                    and engineering teams for optimal design.
+                    Reviewing and ensuring that code adheres to company
+                    standards and best practices.
                   </li>
                   <li>
-                    Provided ongoing software support throughout the project
+                    Adept in leading CI/CD and end-to-end testing for
+                    on-premises systems.
+                  </li>
+                  <li>
+                    Collecting software requirements while collaborating with
+                    operations and engineering teams to achieve an optimal
+                    design.
+                  </li>
+                  <li>
+                    Providing continual software support throughout the project
                     lifecycle.
                   </li>
                 </ul>
               </div>
               <div class="card-date">
-                <span>Jan 2024 - March 2025</span>
+                <span>Jan 2024 - Mar 2025</span>
               </div>
             </div>
-
-            <!-- Experience Card 2 -->
-            <div class="experience-card" style="--animation-delay: 0.4s">
+            <!-- Experience Card 3 -->
+            <div class="experience-card" style="--animation-delay: 0.3s">
               <div class="card-content">
-                <h3>Software Engineer – Project</h3>
-                <p class="subheading">The Pennsylvania State University</p>
+                <h3>AI Software Engineer (Project)</h3>
+                <p class="subheading">Penn State Abington · Full-time</p>
                 <ul>
                   <li>
-                    Developed a predictive analytics platform in Golang
-                    integrating a web crawler and web service distribution using
-                    Agile methodologies (PredictAi).
+                    Architected and implemented a pioneering predictive
+                    analytics platform that integrates advanced web crawling
+                    (CRAB), a trustworthiness engine leveraging CUDA, and a
+                    dynamic web service distribution center (CARP) into a
+                    unified solution.
                   </li>
                   <li>
-                    Engineered secure back-end systems with MySQL stored
-                    procedures, parameterized SQL queries, and token-based
-                    authentication.
+                    Developed robust back-end systems in Golang to enable
+                    dynamic web page generation, incorporating token-based
+                    authentication for secure user and service access.
                   </li>
                   <li>
-                    Configured core modules via a unified JSON configuration
-                    file for streamlined integration.
+                    Engineered a secure data access layer that interacts with
+                    MySQL stored procedures using parameterized SQL queries,
+                    ensuring high standards of data integrity and protection.
                   </li>
                   <li>
-                    Aggregated and processed diverse datasets (airfare, books,
-                    gasoline, inflation) to derive actionable predictive
-                    insights.
+                    Configured system-wide components via a unified JSON
+                    configuration file, streamlining the integration and setup
+                    of core modules (CRAB, CUDA, CARP, DAL).
+                  </li>
+                  <li>
+                    Established extensive logging mechanisms that capture system
+                    events and exceptions directly into the MySQL database,
+                    facilitating real-time monitoring and debugging.
+                  </li>
+                  <li>
+                    Employed Agile methodologies with iterative development and
+                    regular team collaboration via MS Teams, resulting in
+                    continuous feature enhancements and rapid issue resolution.
                   </li>
                 </ul>
               </div>
               <div class="card-date">
-                <span>August – December 2023</span>
+                <span>Aug 2023 - Dec 2023</span>
               </div>
             </div>
-
-            <!-- Experience Card 3 -->
-            <div class="experience-card" style="--animation-delay: 0.6s">
+            <!-- Experience Card 4 -->
+            <div class="experience-card" style="--animation-delay: 0.4s">
               <div class="card-content">
-                <h3>Researcher</h3>
-                <p class="subheading">
-                  Penn State University – Multi-Campus Research Experience for
-                  Undergraduates
-                </p>
+                <h3>Peer Advisor</h3>
+                <p class="subheading">Penn State Abington · Part-time</p>
                 <ul>
                   <li>
-                    Leveraged cutting-edge machine learning and vision
-                    algorithms to streamline the extraction of vital
-                    information.
+                    Assist students with scheduling courses, understanding
+                    degree requirements, and navigating academic procedures.
                   </li>
                   <li>
-                    Introduced a Convolutional Recurrent Neural Network (CRNN)
+                    Answer phone calls with respect for confidentiality and
+                    address student questions or concerns regarding advising.
+                  </li>
+                  <li>
+                    Implement student adviser assignments and handle emails from
+                    students and faculty.
+                  </li>
+                  <li>
+                    Represent the Advising Center at campus events and create
+                    and implement programs that raise awareness of its
+                    resources.
+                  </li>
+                </ul>
+              </div>
+              <div class="card-date">
+                <span>Apr 2022 - Dec 2023</span>
+              </div>
+            </div>
+            <!-- Experience Card 5 -->
+            <div class="experience-card" style="--animation-delay: 0.5s">
+              <div class="card-content">
+                <h3>Teaching Assistant STEM</h3>
+                <p class="subheading">Penn State Abington · Part-time</p>
+                <ul>
+                  <li>
+                    Collaborated with faculty to ensure smooth class operation
+                    and addressed student queries to assist with their learning
+                    comprehension.
+                  </li>
+                  <li>
+                    Leveraged cultural competence to create a welcoming and
+                    inclusive classroom setting, promoting diverse perspectives.
+                  </li>
+                  <li>
+                    Implemented organizational strategies to coordinate class
+                    activities and responsibilities, promoting a structured
+                    learning environment.
+                  </li>
+                </ul>
+              </div>
+              <div class="card-date">
+                <span>Aug 2023 - Sep 2023</span>
+              </div>
+            </div>
+            <!-- Experience Card 6 -->
+            <div class="experience-card" style="--animation-delay: 0.6s">
+              <div class="card-content">
+                <h3>Undergraduate Researcher</h3>
+                <p class="subheading">Penn State Abington · Full-time</p>
+                <ul>
+                  <li>
+                    Developed an automated system for extracting vital
+                    information from a diverse range of product labels.
+                  </li>
+                  <li>
+                    Employed cutting-edge machine learning and vision algorithms
+                    to optimize the extraction process.
+                  </li>
+                  <li>
+                    Introduced the Convolutional Recurrent Neural Network (CRNN)
                     deep learning model.
                   </li>
                   <li>
-                    Customized an Optical Character Recognition (OCR) algorithm
+                    Seamlessly integrated a Convolutional Neural Network (CNN)
+                    for efficient image feature extraction.
+                  </li>
+                  <li>
+                    Incorporated a Recurrent Neural Network (RNN) to recognize
+                    sequences in text labels.
+                  </li>
+                  <li>
+                    Customized the Optical Character Recognition (OCR) algorithm
                     for improved text recognition.
+                  </li>
+                  <li>
+                    Leveraged the capabilities of the Tesseract OCR engine to
+                    boost accuracy.
                   </li>
                   <li>
                     Utilized the Open Food Facts API to enhance data analysis.
                   </li>
                   <li>
-                    Implemented a text-only RNN model to further refine the
+                    Implemented a text-only RNN model, further refining the
                     extraction process.
                   </li>
                 </ul>
               </div>
               <div class="card-date">
-                <span>May - August 2023</span>
+                <span>May 2023 - Aug 2023</span>
               </div>
             </div>
-
-            <!-- Experience Card 4 -->
+            <!-- Experience Card 7 -->
+            <div class="experience-card" style="--animation-delay: 0.7s">
+              <div class="card-content">
+                <h3>Full Stack Developer (Project)</h3>
+                <p class="subheading">Penn State Abington</p>
+                <ul>
+                  <li>
+                    The team leader of four that successfully deployed the
+                    software to our client in time.
+                  </li>
+                  <li>
+                    FlowChart project to guide students at Penn State Abington
+                    with their academic path in B.S. Criminology and understand
+                    their time of graduation.
+                  </li>
+                  <li>
+                    Engineered a flowchart application, increasing efficiency by
+                    50% with advanced front-end and back-end work.
+                  </li>
+                  <li>
+                    Played a pivotal role in implementing the software
+                    development life cycle in an agile setting.
+                  </li>
+                  <li>
+                    Successfully met 100% of client requirements and received
+                    positive feedback for functionality and usability.
+                  </li>
+                  <li>
+                    Led a team of four, introducing weekly sync-ups and a shared
+                    task board, which boosted team productivity.
+                  </li>
+                </ul>
+              </div>
+              <div class="card-date">
+                <span>Aug 2022 - Dec 2022</span>
+              </div>
+            </div>
+            <!-- Experience Card 8 -->
             <div class="experience-card" style="--animation-delay: 0.8s">
               <div class="card-content">
-                <h3>Software Engineer - Project</h3>
-                <p class="subheading">Rowan College at Burlington County</p>
+                <h3>Software Engineer (Project)</h3>
+                <p class="subheading">
+                  Rowan College at Burlington County · Full-time
+                </p>
                 <ul>
                   <li>
                     Developed a dynamic predator-prey simulation in Java,
-                    visualizing interactions among lions, foxes, and rabbits in
-                    a custom GUI.
+                    showcasing population interactions among lions, foxes, and
+                    rabbits in a custom GUI.
                   </li>
                   <li>
-                    Utilized Agile methodologies to iterate features,
-                    incorporate feedback, and collaborate effectively.
+                    Implemented species-specific behaviors like longevity,
+                    reproduction rates, and hunting mechanisms to mimic a
+                    realistic food chain.
                   </li>
                   <li>
-                    Applied object-oriented principles to design clean, modular
-                    class hierarchies for each animal type.
-                  </li>
-                  <li>
-                    Leveraged graphical representations to visualize real-time
-                    population shifts and environmental impacts.
+                    Leveraged object-oriented principles to structure class
+                    hierarchies for each animal type, facilitating clean,
+                    modular code.
                   </li>
                 </ul>
               </div>
               <div class="card-date">
-                <span>January – May 2021</span>
-              </div>
-            </div>
-
-            <!-- Experience Card 5 -->
-            <div class="experience-card" style="--animation-delay: 1s">
-              <div class="card-content">
-                <h3>Full Stack Developer</h3>
-                <p class="subheading">
-                  Penn State Abington – Interactive Flow Chart
-                </p>
-                <ul>
-                  <li>
-                    Designed an interactive flowchart tool involving complex
-                    front-end and back-end integration.
-                  </li>
-                  <li>
-                    Implemented the full software development life cycle in an
-                    agile environment.
-                  </li>
-                  <li>
-                    Met all client requirements with a focus on usability and
-                    responsiveness.
-                  </li>
-                  <li>
-                    Played a leadership role on a team of four to ensure
-                    effective collaboration and project success.
-                  </li>
-                </ul>
-              </div>
-              <div class="card-date">
-                <span>August - December 2022</span>
-              </div>
-            </div>
-
-            <!-- Experience Card 6 -->
-            <div class="experience-card" style="--animation-delay: 1.2s">
-              <div class="card-content">
-                <h3>Software Developer</h3>
-                <p class="subheading">
-                  Penn State Abington – Music Recommender (Machine Learning)
-                </p>
-                <ul>
-                  <li>
-                    Designed a music recommender application using machine
-                    learning algorithms.
-                  </li>
-                  <li>
-                    Implemented the Spotify API using developer account
-                    credentials.
-                  </li>
-                  <li>
-                    Trained and tested the model to display the top five
-                    recommendations.
-                  </li>
-                  <li>
-                    Utilized random user playlists to produce customized
-                    recommendations.
-                  </li>
-                </ul>
-              </div>
-              <div class="card-date">
-                <span>January - May 2022</span>
+                <span>Jan 2020 - May 2020</span>
               </div>
             </div>
           </div>
@@ -1412,7 +1526,7 @@
                 <div
                   id="appsCarousel"
                   class="carousel slide carousel-fade mt-4"
-                  data-ride="carousel"
+                  data-bs-ride="carousel"
                 >
                   <div class="carousel-inner">
                     <div
@@ -1423,6 +1537,7 @@
                         class="d-block w-100"
                         src="./assets/gifs/InteractiveFlowChart.gif"
                         alt="Interactive Flow-Chart demo"
+                        loading="lazy"
                       />
                       <div class="carousel-caption d-none d-md-block">
                         <h5>
@@ -1438,25 +1553,25 @@
                     class="carousel-control-prev"
                     href="#appsCarousel"
                     role="button"
-                    data-slide="prev"
+                    data-bs-slide="prev"
                   >
                     <span
                       class="carousel-control-prev-icon"
                       aria-hidden="true"
                     ></span>
-                    <span class="sr-only">Previous</span>
+                    <span class="visually-hidden">Previous</span>
                   </a>
                   <a
                     class="carousel-control-next"
                     href="#appsCarousel"
                     role="button"
-                    data-slide="next"
+                    data-bs-slide="next"
                   >
                     <span
                       class="carousel-control-next-icon"
                       aria-hidden="true"
                     ></span>
-                    <span class="sr-only">Next</span>
+                    <span class="visually-hidden">Next</span>
                   </a>
                 </div>
               </div>
@@ -1470,7 +1585,7 @@
                 <div
                   id="websitesCarousel"
                   class="carousel slide carousel-fade mt-4"
-                  data-slide="carousel"
+                  data-bs-ride="carousel"
                 >
                   <div class="carousel-inner">
                     <div
@@ -1481,6 +1596,7 @@
                         class="d-block w-100"
                         src="./assets/gifs/blogwebsite.gif"
                         alt="Blog Website demo"
+                        loading="lazy"
                       />
                       <div class="carousel-caption d-none d-md-block">
                         <h5>
@@ -1495,6 +1611,7 @@
                         class="d-block w-100"
                         src="./assets/gifs/LabelOcr.gif"
                         alt="LabelOCR demo"
+                        loading="lazy"
                       />
                       <div class="carousel-caption d-none d-md-block">
                         <h5>
@@ -1507,6 +1624,7 @@
                         class="d-block w-100"
                         src="./assets/gifs/PredictAi.gif"
                         alt="PredictAi demo"
+                        loading="lazy"
                       />
                       <div class="carousel-caption d-none d-md-block">
                         <h5>
@@ -1520,25 +1638,25 @@
                     class="carousel-control-prev"
                     href="#websitesCarousel"
                     role="button"
-                    data-slide="prev"
+                    data-bs-slide="prev"
                   >
                     <span
                       class="carousel-control-prev-icon"
                       aria-hidden="true"
                     ></span>
-                    <span class="sr-only">Previous</span>
+                    <span class="visually-hidden">Previous</span>
                   </a>
                   <a
                     class="carousel-control-next"
                     href="#websitesCarousel"
                     role="button"
-                    data-slide="next"
+                    data-bs-slide="next"
                   >
                     <span
                       class="carousel-control-next-icon"
                       aria-hidden="true"
                     ></span>
-                    <span class="sr-only">Next</span>
+                    <span class="visually-hidden">Next</span>
                   </a>
                 </div>
               </div>
