@@ -73,17 +73,52 @@ document.querySelectorAll(".fancy-btn").forEach((btn) => {
 window.addEventListener("DOMContentLoaded", (event) => {
   // Activate Bootstrap scrollspy on the main nav element
   const sideNav = document.body.querySelector("#sideNav");
+  const navLinks = document.querySelectorAll("#sideNav .nav-link");
+  let scrollSpyInstance;
+
   if (sideNav) {
-    new bootstrap.ScrollSpy(document.body, {
+    scrollSpyInstance = bootstrap.ScrollSpy.getOrCreateInstance(document.body, {
       target: "#sideNav",
       rootMargin: "0px 0px -40%",
     });
   }
 
-  // Toggle hamburger animation
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("is-active");
+  const setActiveLink = (activeLink) => {
+    navLinks.forEach((link) => {
+      link.classList.toggle("active", link === activeLink);
+    });
+  };
+
+  const currentActiveLink = document.querySelector("#sideNav .nav-link.active");
+  if (currentActiveLink) {
+    setActiveLink(currentActiveLink);
+  }
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => setActiveLink(link));
   });
+
+  document.body.addEventListener("activate.bs.scrollspy", () => {
+    const activeLink = document.querySelector("#sideNav .nav-link.active");
+    if (activeLink) {
+      setActiveLink(activeLink);
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (scrollSpyInstance) {
+      scrollSpyInstance.refresh();
+    }
+  });
+
+  // Toggle hamburger animation for any other hamburger buttons
+  const hamburger = document.querySelector(".hamburger");
+  const sidebarToggle = document.getElementById("sidebarToggle");
+  if (hamburger && hamburger !== sidebarToggle) {
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("is-active");
+    });
+  }
 });
 
 // Listen for window resize events
