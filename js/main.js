@@ -87,16 +87,6 @@ document.querySelectorAll(".fancy-btn").forEach((btn) => {
 });
 
 window.addEventListener("DOMContentLoaded", (event) => {
-  // Activate Bootstrap scrollspy on the main nav element
-  const sideNav = document.body.querySelector("#sideNav");
-  if (sideNav) {
-    new bootstrap.ScrollSpy(document.body, {
-      target: "#sideNav",
-      offset: 100,
-    });
-  }
-
-  // Toggle hamburger animation
   const hamburger = document.getElementById("sidebarToggle");
   if (hamburger) {
     hamburger.addEventListener("click", () => {
