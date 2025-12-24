@@ -3,25 +3,27 @@
  * Copyright 2013-2023 Start Bootstrap
  * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
  */
-document.addEventListener("DOMContentLoaded", () => {
-  const sidebarToggle = document.getElementById("sidebarToggle");
-  const wrapper = document.getElementById("wrapper");
-  const sideNav = document.getElementById("sideNav");
-  const mainContent = document.getElementById("main-content"); // Ensure this id matches the id of your main content element
+window.addEventListener("DOMContentLoaded", (event) => {
+  // Activate Bootstrap scrollspy on the main nav element
+  const sideNav = document.body.querySelector("#sideNav");
+  const navLinks = document.querySelectorAll("#sideNav .nav-link");
+  let scrollSpyInstance;
 
-  if (sidebarToggle && wrapper && sideNav && mainContent) {
-    sidebarToggle.addEventListener("click", () => {
-      const isCollapsed = wrapper.classList.toggle("collapsed");
-      sidebarToggle.classList.toggle("is-active");
-      sideNav.classList.toggle("collapsed");
-      if (isCollapsed) {
-        mainContent.style.transform = "translateX(-8.5rem)"; // Default transform when sidebar is collapsed
-      } else {
-        mainContent.style.transform = "translateX(0)"; // Adjusted transform when sidebar is expanded
-      }
+  if (sideNav) {
+    scrollSpyInstance = bootstrap.ScrollSpy.getOrCreateInstance(document.body, {
+      target: "#sideNav",
+      offset: 100,
+    });
+
+    // Refresh ScrollSpy when nav links are clicked to ensure active state updates
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        setTimeout(() => {
+          scrollSpyInstance.refresh();
+        }, 100); // Small delay to allow scroll to complete
+      });
     });
   }
-});
 
 document.querySelectorAll(".carousel-item").forEach((item) => {
   item.addEventListener("mouseover", function () {
